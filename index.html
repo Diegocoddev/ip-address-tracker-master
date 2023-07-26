@@ -15,30 +15,44 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Mi Rastreador APP</h1>
-
-    <input type="text" id="inputIP"/>
-    <button id="btnIP">Buscar IP</button>
-
-    <label for="">
-        IP ADDRESS:
-        <p id="ip"></p>
-    </label>
-    <label for="">
-        LOCATION:
-        <p id="locationIP"></p>
-    </label>
-    <label for="">
-        TIMEZONE:
-        <p id="timezone"></p>
-    </label>
-    <label for="">
-        ISP:
-        <p id="isp"></p>
-        
-    <div id="map"></div>
-
-    </label>
+    <section class="wrapper">
+        <section class="header">
+            <h1>IP Address Tracker</h1>
+            <div class="search">
+                <input type="text" placeholder="Serach for any IP address or domain" id="inputIP" required/>
+                <button id="btnIP">Buscar IP</button>
+            </div>
+        </section>
+        <section class="center">
+            <div class="ip-address">
+                <label for="">
+                    IP ADDRESS:
+                    <p id="ip"></p>
+                </label>
+            </div>
+            <div class="location-ip">
+                <label for="">
+                    LOCATION:
+                    <p id="locationIP"></p>
+                </label>
+            </div>
+            <div class="timezone">
+                <label for="">
+                    TIMEZONE:
+                    <p id="timezone"></p>
+                </label>
+            </div>
+            <div class="isp">
+                <label for="">
+                    ISP:
+                    <p id="isp"></p>                    
+                </label>
+            </div>
+        </section>
+        <section class="map">
+            <div id="map"></div>
+        </section>
+    </section>
 <script src="./geo.js"></script>
 </body>
 </html>
