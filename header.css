@@ -17,5 +17,16 @@
     border-top-right-radius: 0px;
     border-bottom-right-radius: 0px;
     width: 330px;
+    margin-right: -5px;
 }
 
+.header div button {
+    background-color: black;
+    padding-top: 9px;
+    padding-bottom: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-style: none;
+    width: 40px;
+    cursor: pointer;
+}

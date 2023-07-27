@@ -1,0 +1,39 @@
+.center {
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    border-radius: 10px;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 50px;
+    padding: 50px;
+    gap: 100px;
+}
+
+.ip-address, .location-ip, .timezone, .isp {
+    color: var(--Dark-Gray);
+    border-left: 1px;
+    border-color: var(--Dark-Gray);
+    border-style: solid;
+    border-top: none;
+    border-bottom: none;
+    border-right: none;
+    font-size: 10px;
+}
+
+.ip-address {
+    border-style: none;
+}
+
+.ip-address label, .location-ip label, .timezone label, .isp label {
+    margin-left: 20px;
+    margin-top: 0px;
+}
+
+.ip-address label p, .location-ip label p, .timezone label p, .isp label p {
+    color: var(--Very-Dark-Gray);
+    margin-top: 15px;
+    font-size: 18px;
+    margin-left: 20px;
+}
+   
