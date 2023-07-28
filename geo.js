@@ -14,7 +14,7 @@ const searchIP = (event) => {
     const geoAPI = async(url) => {
         const dataGeo = await fetch(url);
         const resultData = await dataGeo.json();
-        return resultData;
+        return resultData;   
     }
 
     geoAPI(`https://geo.ipify.org/api/v2/country,city?apiKey=at_EfOENpLctW6eGWu3rTLyvNSV94yfU&ipAddress=${inputIP.value}`)
@@ -24,12 +24,20 @@ const searchIP = (event) => {
         timezone.innerText = res.location.timezone;
         isp.innerText = res.isp;
 
-        let map = L.map('map').setView([res.location.lat, res.location.lng], 13);
+        var container = L.DomUtil.get('map');
+        if (container != null) {
+            container._leaflet_id = null;
+        }
 
+        let map = L.map('map').setView([res.location.lat, res.location.lng], 13);
+        
         L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
         maxZoom: 19,
         attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
         }).addTo(map);
+
+        L.marker([res.location.lat, res.location.lng]).addTo(map)
+        .bindPopup(res.ip)
     })
     .catch((err) => console.log(err));
 }
