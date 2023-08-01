@@ -30,3 +30,9 @@
     width: 40px;
     cursor: pointer;
 }
+
+@media (max-width: 375px){
+    .header div input{
+        width: 285px;
+    }
+}

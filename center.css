@@ -36,4 +36,30 @@
     font-size: 18px;
     margin-left: 20px;
 }
+
+@media (max-width: 375px){
+    .center {
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        border-radius: 10px;
+        margin-left: 25px;
+        margin-right: 25px;
+        margin-top: 25px;
+        padding: 25px;
+        gap: 25px;
+    }
+
+    .ip-address, .location-ip, .timezone, .isp {
+        color: var(--Dark-Gray);
+        font-size: 10px;
+        border-style: none;   
+    }
+
+    .ip-address label p, .location-ip label p, .timezone label p, .isp label p {
+        color: var(--Very-Dark-Gray);
+        font-size: 18px;
+     }
+
+}
    
