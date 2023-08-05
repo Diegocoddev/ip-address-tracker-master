@@ -10,6 +10,13 @@ const isp = document.getElementById("isp");
 const inputIP = document.getElementById("inputIP");
 const btnIP = document.getElementById("btnIP");
 
+
+inputIP.addEventListener('keyup', function(event) {
+    if (event.keyCode === 13) {
+      searchIP();
+    }
+  });
+
 const searchIP = (event) => {
     const geoAPI = async(url) => {
         const dataGeo = await fetch(url);
@@ -24,7 +31,7 @@ const searchIP = (event) => {
         timezone.innerText = res.location.timezone;
         isp.innerText = res.isp;
 
-        var container = L.DomUtil.get('map');
+        let container = L.DomUtil.get('map');
         if (container != null) {
             container._leaflet_id = null;
         }
@@ -36,8 +43,15 @@ const searchIP = (event) => {
         attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
         }).addTo(map);
 
-        L.marker([res.location.lat, res.location.lng]).addTo(map)
-        .bindPopup(res.ip)
+        L.marker([res.location.lat, res.location.lng], {
+            icon: L.icon({
+              iconUrl: "./images/icon-location.svg",
+              iconSize: [46, 56],
+              iconAnchor: [12, 12],
+              popupAnchor: [0, 0]
+            })
+          }).addTo(map)
+          .bindPopup(res.ip)
     })
     .catch((err) => console.log(err));
 }
