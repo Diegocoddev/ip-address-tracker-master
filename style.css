@@ -31,3 +31,9 @@ body {
     z-index: 0;
     top: 130px;
 }
+
+@media (max-width:375px){
+    #map{
+        top:200px;
+    }
+}
