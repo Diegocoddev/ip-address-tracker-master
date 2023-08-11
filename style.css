@@ -26,5 +26,8 @@ body {
 }
 
 #map { 
-    height: 377px; 
+    height: 469px; 
+    position: relative;
+    z-index: 0;
+    top: 130px;
 }

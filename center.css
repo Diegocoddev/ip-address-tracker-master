@@ -1,13 +1,16 @@
 .center {
     display: flex;
-    justify-content: center;
+    justify-content:space-around;
     background-color: white;
     border-radius: 10px;
-    margin-left: 100px;
-    margin-right: 100px;
+    margin-left: 50px;
     margin-top: 50px;
     padding: 50px;
     gap: 100px;
+    position: absolute;
+    z-index: 1;
+    left: 4%;
+    width: 1000px;
 }
 
 .ip-address, .location-ip, .timezone, .isp {
@@ -48,6 +51,7 @@
         margin-top: 25px;
         padding: 25px;
         gap: 25px;
+        width: 295px;
     }
 
     .ip-address, .location-ip, .timezone, .isp {
